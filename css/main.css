@@ -1,0 +1,413 @@
+:root {
+  --bkgd-dark: #101325;
+  --bkgd-light: #2d2e55;
+  --yellow-dark: #e0ae39;
+  --yellow-light: #f5c75c;
+  --gris-color: #b8b6b6;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.8rem;
+}
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bkgd-dark);
+}
+/* ======== Start Frameworks ======== */
+.main-btn {
+  background-color: var(--yellow-dark);
+  color: var(--bkgd-dark);
+  transition: 0.6s;
+}
+.main-btn:hover {
+  background-color: var(--yellow-light);
+  transform: scale(1.03);
+}
+.main-info {
+  color: var(--gris-color);
+  font-size: var(--normal-font-size);
+  max-width: 100%;
+}
+.section-title-01 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  background: linear-gradient(to top, transparent 0%, white 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+  transition: 0.3s;
+  animation-name: ;
+}
+.section-title-02 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  transform: translateY(-75px);
+  position: relative;
+  transition: 0.3s;
+}
+.section-title-02::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  top: 100%;
+  left: 50%;
+  background-color: var(--yellow-dark);
+  transition: 0.3s;
+}
+
+@keyframes add {
+  from {
+  }
+  to {
+  }
+}
+/* ======== End Frameworks ======== */
+
+/* ======== Start Scroll Bar ======== */
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--bkgd-light);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--yellow-light);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--yellow-dark);
+}
+/* ======== End Scroll Bar ======== */
+
+/* ======== Start NavBar ======== */
+.navbar {
+  background-color: var(--bkgd-dark);
+  opacity: 95%;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: 0.3s;
+}
+.navbar .navbar-toggler {
+  border: 2px solid white;
+}
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: var(--yellow-light);
+}
+.navbar .nav-item .nav-link {
+  position: relative;
+}
+.navbar .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 10px;
+  left: 16px;
+  background-color: var(--yellow-light);
+  transition: all 0.6s ease;
+}
+.navbar .nav-item a.nav-link:hover::before {
+  width: calc(100% - 2rem);
+}
+.navbar .nav-item .nav-link:focus,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:active {
+  color: var(--yellow-light);
+}
+@media (max-width: 992px) {
+  .navbar .nav-item .nav-link:hover::before {
+    width: 0 !important;
+  }
+}
+/* ======== End NavBar ======== */
+
+/* ======== Start Hero Section ======== */
+.hero .hero-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+}
+.hero .hero-info h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 56px;
+}
+.hero .hero-info h2 span {
+  color: var(--yellow-light);
+}
+.hero .hero-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 40px;
+}
+.hero .hero-info p {
+  color: var(--gris-color);
+  font-size: var(--normal-font-size);
+}
+.hero .scroll-down a {
+  color: white;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  text-decoration: none;
+}
+.hero .scroll-down svg {
+  color: var(--yellow-light);
+  font-size: 1.2rem;
+  animation: arrow-move ease 2s infinite;
+}
+@keyframes arrow-move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-img img {
+    animation: hero-img-move linear 2s alternate-reverse infinite;
+  }
+  @keyframes hero-img-move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(8px);
+    }
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .hero .hero-img img {
+    width: 75%;
+  }
+}
+@media (min-width: 993px) {
+  .hero .hero-info p {
+    max-width: 80%;
+  }
+}
+/* ======== End Hero Section ======== */
+
+/* ======== Start About Section ======== */
+.about-info .description h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.about-info .description h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.about-info .description h4 span {
+  color: var(--yellow-light);
+}
+.about-info .description p {
+  border-bottom: 2px solid var(--gris-color);
+}
+/* ======== End About Section ======== */
+
+/* ======== Start Skills Section ======== */
+.skills-info h4 {
+  background: var(--yellow-dark);
+  font-size: var(--normal-font-size);
+  width: fit-content;
+  font-weight: 600;
+  padding: 7px 16px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+}
+.educ-list .item {
+  background: var(--bkgd-light);
+  box-shadow: var(--yellow-light);
+  border-bottom: 3px solid var(--yellow-light);
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.educ-list .item .year {
+  font-size: var(--small-font-size);
+  margin-bottom: 8px;
+}
+.educ-list .item {
+  color: var(--gris-color);
+  font-size: var(--small-font-size);
+}
+.educ-list .item p span {
+  color: white;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+.bar {
+  background: var(--bkgd-light);
+  box-shadow: var(--yellow-light);
+  padding: 16px;
+  margin-bottom: 13px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: var(--small-font-size);
+}
+.bar .info span {
+  font-weight: 500;
+}
+.bar .line {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background-color: var(--gris-color);
+  border-radius: 2px;
+}
+.bar .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--yellow-light);
+  border-radius: 2px;
+}
+.bar .html::before {
+  width: 95%;
+}
+.bar .css::before {
+  width: 85%;
+}
+.bar .javascript::before {
+  width: 80%;
+}
+
+.bar .php::before {
+  width: 20%;
+}
+.bar .wordpress::before {
+  width: 60%;
+}
+.bar .figma::before {
+  width: 70%;
+}
+.bar .photoshop::before {
+  width: 80%;
+}
+.bar .canva::before {
+  width: 70%;
+}
+.educ-list .item:hover,
+.bar:hover {
+  transform: scale(1.04);
+}
+/* ======== End Skills Section ======== */
+
+/* ======== Start Services Section ======== */
+.service .icon-holder {
+  height: 150px;
+}
+.service .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service .icon-holder .number {
+  font-size: 12rem;
+  opacity: 2%;
+}
+.service .icon-holder .icon {
+  color: white;
+}
+.service h4 {
+  color: var(--yellow-dark);
+  text-transform: uppercase;
+  margin-top: 48px;
+}
+.service p {
+  background-color: var(--bkgd-light);
+  box-shadow: var(--yellow-light);
+  border-bottom: 3px solid transparent;
+  height: auto;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.service p:hover {
+  transform: translateY(-5px);
+  border-bottom-color: var(--yellow-light);
+}
+/* ======== End Services Section ======== */
+
+/* ======== Start Contact Section ======== */
+.contact h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.contact-list li {
+  margin-bottom: 2.5rem;
+}
+.contact-list li h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.contact-list li h3 svg {
+  color: var(--yellow-light);
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+.contact-list li span {
+  color: var(--gris-color);
+  margin-left: 40px;
+}
+.contact-list li span a {
+  color: var(--gris-color);
+}
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid var(--bkgd-light);
+  color: white;
+  background: var(--bkgd-dark);
+  font-size: var(--normal-font-size);
+  margin-bottom: 20px;
+  padding: 18px 10px;
+  border-radius: 5px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--yellow-dark);
+}
+::placeholder {
+  color: var(--gris-color);
+}
+.contact-form .second-row input {
+  width: 49%;
+}
+/* ======== End Contact Section ======== */
+
+/* ======== Start Footer ======== */
+.footer .middle-footer a {
+  color: white;
+  opacity: 50%;
+  text-decoration: none;
+  transition: 0.6s;
+}
+.footer .middle-footer a:hover,
+.footer .middle-footer a:focus {
+  opacity: 100%;
+}
+.footer .media-icons svg {
+  color: white;
+  opacity: 50%;
+  transition: 0.6s;
+}
+.footer .media-icons svg:hover,
+.footer .media-icons svg:focus {
+  opacity: 100%;
+}
+/* ======== End Footer ======== */
